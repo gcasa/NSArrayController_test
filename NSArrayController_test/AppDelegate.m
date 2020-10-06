@@ -11,6 +11,7 @@
 
 @property NSMutableArray *array;
 @property IBOutlet NSWindow *window;
+@property IBOutlet NSArrayController *arrayController;
 
 @end
 
@@ -19,8 +20,15 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     NSMutableArray *keys = [NSMutableArray arrayWithObjects: @"1", @"2", @"3", nil];
-
     self.array = keys;
+    
+    // Iterate over the arranged objects...
+    NSString *obj = nil;
+    NSEnumerator *en = [[self.arrayController arrangedObjects] objectEnumerator];
+    while ((obj = [en nextObject]) != nil)
+    {
+        NSLog(@"%@", obj);
+    }
 }
 
 
