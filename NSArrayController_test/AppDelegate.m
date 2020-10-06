@@ -9,13 +9,18 @@
 
 @interface AppDelegate ()
 
-@property (strong) IBOutlet NSWindow *window;
+@property NSMutableArray *array;
+@property IBOutlet NSWindow *window;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    NSMutableArray *keys = [NSMutableArray arrayWithObjects: @"1", @"2", @"3", nil];
+
+    self.array = keys;
 }
 
 
