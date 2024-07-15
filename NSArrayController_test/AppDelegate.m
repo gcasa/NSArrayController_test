@@ -22,10 +22,12 @@
 @property NSMutableArray *array;
 @property IBOutlet NSWindow *window;
 @property IBOutlet NSArrayController *arrayController;
+@property NSMutableArray *selectedIndexes;
 
 @end
 
 @implementation AppDelegate
+
 + (NSMutableArray *) buildNodes
 {
     NSMutableArray *nodes = [NSMutableArray array];
@@ -69,6 +71,11 @@
 - (BOOL) editable
 {
     return YES;
+}
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification
+{
+    NSLog(@"Selection changed... %@", self.selectedIndexes);
 }
 
 @end

@@ -22,6 +22,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <arrayController id="Kle-8D-89n">
             <connections>
+                <binding destination="Voe-Tx-rLC" name="selectionIndexes" keyPath="self.selectedIndexes" id="54K-lJ-BUs"/>
                 <binding destination="Voe-Tx-rLC" name="contentArray" keyPath="self.array" id="aF1-UC-Vil"/>
             </connections>
         </arrayController>
@@ -727,6 +728,9 @@
                                             </connections>
                                         </tableColumn>
                                     </tableColumns>
+                                    <connections>
+                                        <outlet property="delegate" destination="Voe-Tx-rLC" id="vlc-AJ-FGQ"/>
+                                    </connections>
                                 </tableView>
                             </subviews>
                         </clipView>
