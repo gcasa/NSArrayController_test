@@ -22,8 +22,8 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <arrayController id="Kle-8D-89n">
             <connections>
-                <binding destination="Voe-Tx-rLC" name="selectionIndexes" keyPath="self.selectedIndexes" id="54K-lJ-BUs"/>
                 <binding destination="Voe-Tx-rLC" name="contentArray" keyPath="self.array" id="aF1-UC-Vil"/>
+                <binding destination="Voe-Tx-rLC" name="selectionIndexes" keyPath="self.selectedIndexes" id="54K-lJ-BUs"/>
             </connections>
         </arrayController>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
